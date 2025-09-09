@@ -1,4 +1,4 @@
-"useClient";
+"use client";
 import { useContext, useEffect, useState, useRef } from 'react';
 import SliderBanner from '../components/slider/index';
 import CatSlider from '@/components/catSlider';

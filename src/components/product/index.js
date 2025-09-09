@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState, useContext } from 'react';
 import './style.css';
 import Rating from '@mui/material/Rating';
