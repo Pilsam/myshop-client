@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 
 const OrdersPage = () => {
   const [orders, setOrders] = useState([]);
