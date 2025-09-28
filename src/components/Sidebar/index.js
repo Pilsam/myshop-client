@@ -71,21 +71,28 @@ const changePrice=(val)=>{
                     <div className='catList'>
 
                         {
-                            props.catData !== undefined && props.catData.length !== 0 &&
                             props.catData?.map((item, index) => {
                                 return (
-                                    <Link href={`/category/${item.attributes.title.toLowerCase()}`}>
+                                    <Link
+                                        key={item.id || index}
+                                        href={`/category/${item.attributes.title.toLowerCase()}`}
+                                    >
                                         <div className='catItem d-flex align-items-center'>
-                                            <span className='img'><img src='https://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-1.svg' width={30} /></span>
+                                            <span className='img'>
+                                                <img
+                                                    src='https://wp.alithemes.com/html/nest/demo/assets/imgs/theme/icons/category-1.svg'
+                                                    width={30}
+                                                    alt={item.attributes.title}
+                                                />
+                                            </span>
                                             <h4 className='mb-0 ml-3 mr-3 text-capitalize'>{item.attributes.title}</h4>
                                             <span className='d-flex align-items-center justify-content-center rounded-circle ml-auto'>
-                                                {item.attributes.products.data.length}</span>
+                                                {item.attributes.products.data.length}
+                                            </span>
                                         </div>
                                     </Link>
                                 )
-
                             })
-
                         }
 
                     </div>

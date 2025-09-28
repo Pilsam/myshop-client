@@ -89,14 +89,13 @@ const Cart = () => {
                                             {
                                                 cartItems?.length !== 0 && cartItems?.map((item, index) => {
                                                     return (
-                                                        <tr>
-
+                                                        <tr key={item.id || index}>
                                                             <td width={"50%"}>
                                                                 <div className='d-flex align-items-center'>
-
+                                                
                                                                     <div className='img'>
                                                                         <Link href={`/product/${item.attributes.productId}`}>
-                                                                            <img src={'http://localhost:1337' + item.attributes.imgUrl} className='w-100' />
+                                                                            <img src={'http://localhost:1337' + item.attributes.imgUrl} className='w-100' alt=''/>
                                                                         </Link>
                                                                     </div>
 
